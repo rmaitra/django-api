@@ -84,7 +84,7 @@ DATABASES = {
     }
 }
 
-if DEBUG != True:#
+if DEBUG:
     DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
@@ -129,3 +129,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+print STATIC_ROOT
