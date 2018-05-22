@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from tutorial.api.models import Post
+from tutorial.api.models import Post, Event
 from rest_framework import serializers
 
 
@@ -21,5 +21,5 @@ class PostSerializer(serializers.HyperlinkedModelSerializer):
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Post
+        model = Event
         fields = ('classification', 'ip_address')
